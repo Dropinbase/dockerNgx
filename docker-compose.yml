@@ -1,0 +1,14 @@
+version: '2.1'
+services:
+  server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: dropinbase
+    image: dropinbase:ng15
+    volumes:
+      - ./:/dropinbase
+    ports:
+    - 80:80
+    - 443:443
+
