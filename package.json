@@ -1,0 +1,13 @@
+{
+  "name": "dropinbase",
+  "version": "1.0.9",
+  "description": "CLI tool for starting a new project",
+  "bin": {
+    "dropinbase": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^8.0.0",
+    "fs-extra": "^10.0.0",
+    "yauzl": "^2.10.0"
+  }
+}

@@ -1,0 +1,54 @@
+Dropinbase Project Setup Guide
+Introduction
+This README provides step-by-step instructions for setting up a new Dropinbase project. Dropinbase helps you to quickly set up your project with a structured database. This guide will walk you through the installation process, from global package installation to project initialization and setup.
+
+Prerequisites
+Node.js and npm installed on your machine
+An empty database for the Dropinbase project
+Installation Steps
+1. Global Package Installation
+First, you need to install the Dropinbase package globally. Open your terminal and run the following command:
+
+bash
+Copy code
+npm install dropinbase -g
+2. Initialize a New Project
+After the global package is installed, you can initialize a new Dropinbase project with a name of your choice. Replace projectName with the desired project name:
+
+bash
+Copy code
+dropinbase init projectName
+3. Navigate to the Project Directory
+Change to the directory of the project you just created:
+
+bash
+Copy code
+cd projectName
+4. Start the Project
+To start the Dropinbase application, run the following command:
+
+bash
+Copy code
+npm start
+5. Complete the Installation Steps
+Open your web browser and visit https://localhost.
+Follow the on-screen installation steps. These steps will guide you through installing the Dropinbase database structure that holds your project design.
+Note: At this stage, you'll need to connect to an empty database. You can later add a link to your customer data in this database.
+
+6. Final Steps
+Once the installation is complete, reload the web page. You can log in using the following default credentials:
+
+Username: admin
+Password: test
+Additional Information
+Database
+The initial database should be empty. You'll have the option to add your customer data to this database later.
+
+Troubleshooting
+If you encounter any issues during installation or have further questions, feel free to reach out for support.
+
+License
+This project is licensed under the GDP license.
+
+Author
+Dropinbase.com
