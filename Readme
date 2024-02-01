@@ -1,3 +1,8 @@
+
+To publish this file run 
+npm install
+npm publish
+
 Dropinbase Project Setup Guide
 Introduction
 This README provides step-by-step instructions for setting up a new Dropinbase project. Dropinbase helps you to quickly set up your project with a structured database. This guide will walk you through the installation process, from global package installation to project initialization and setup.

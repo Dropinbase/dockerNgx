@@ -1,6 +1,6 @@
 {
   "name": "dropinbase",
-  "version": "1.0.9",
+  "version": "1.1.1",
   "description": "CLI tool for starting a new project",
   "bin": {
     "dropinbase": "./index.js"
