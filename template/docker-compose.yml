@@ -7,7 +7,7 @@ services:
     environment: 
       XDEBUG_CONFIG: mode=debug client_host=host.docker.internal client_port=9003 start_with_request=yes xdebug.log=/tmp/xdebug.log #remove for production releases
     container_name: dropinbase
-    image: dropinbase:ng15
+    image: dropinbase:latest
     volumes:
       - ./:/dropinbase
     ports:

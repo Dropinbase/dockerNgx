@@ -1,4 +1,4 @@
-FROM dropinbase/angular:ng15
+FROM dropinbase/angular:latest
 
 WORKDIR /dropinbase
 RUN chown application:application /dropinbase -R
@@ -9,7 +9,7 @@ ENV Dropinbase_Vendor_Path /vendor
 # COPY nginx/* /opt/docker/etc/nginx/
 # COPY nginx/vhost.common.d/* /opt/docker/etc/nginx/vhost.common.d/
 # COPY nginx.conf /etc/nginx/nginx.conf
-# COPY php.webdevops.ini /opt/docker/etc/php/php.webdevops.ini`
+# COPY php.webdevops.ini /opt/docker/etc/php/php.webdevops.ini
 
 RUN chown application:application /dropinbase/runtime -R
 RUN chmod 755 /dropinbase/runtime -R

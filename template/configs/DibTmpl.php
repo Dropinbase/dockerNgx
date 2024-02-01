@@ -3,7 +3,7 @@ class DIB {
     // Basic settings    
 	public static $ENVIRONMENT='development'; // 'development' = auto-deletion of files, html beautified. 'production' = No deletion, compression of Javascript.
 	public static $TIMEZONE='Africa/Johannesburg'; // See http://php.net/manual/en/timezones.php
-    public static $SITENAME='Dropinbase'; // The title of the browser tab
+    public static $SITENAME='DROPINBASE'; // The title of the browser tab
 	public static $SITELOGO='files/icons/logo.png'; // Available in pef_item.expression
 	
     public static $DEBUG_LEVEL=2; // 0 = no errors logged to error.txt. 1 = errors logged with some detail. 2 = most detail logged.
@@ -25,7 +25,7 @@ class DIB {
 	public static $DEFAULTFRAMEWORK='setNgxMaterial'; // client framework to load at startup
 	public static $OVERRIDEQUEUEWITH = 'None'; // None/NodeJs (Note, NodeJs requires expertise to maintain and run stably in some client environments)
 	public static $NODEJSHOST=null; // NodeJs server connection details (eg 'http://localhost:8080'), OR null (NodeJs will not be initialized)
-	public static $ASYNCRETRYCOUNT=20; // Default count of tries the client will poll for actions in the Queue, before giving up. Can be set dynamically using Queue::updateIntervals().
+	public static $ASYNCRETRYCOUNT=75; // Default count of tries the client will poll for actions in the Queue, before giving up. Can be set dynamically using Queue::updateIntervals().
 	
     public static $SETUPSCRIPT=null; // Path to any script that is run just before the call to the controller is setup.
     public static $RECORDUNITTEST=FALSE; // TRUE or FALSE - Whether all requests must be recorded in pef_unit_test
@@ -49,7 +49,7 @@ class DIB {
 	// The 'params' argument is a semicolon-delimitted list of parameter names used in 'sql' and must match field names in pef_login.
 	// NOTE: Do not override fields used by the system (eg username, email, admin_user, etc.) unless eg CrudEvents is used to maintain them in pef_login.
 	public static $SESSIONINCLUDE = NULL;
-	
+	public static $WRITE_ERRORS_TO = 'file';
 	// Values generated automatically:
 	
 	public static $FORCESSL=true; // Force all traffic to use ssl instead, applies to the BASE URL

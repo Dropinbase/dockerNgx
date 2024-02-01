@@ -16,25 +16,25 @@
 		etjs      (certain Eleutheria templates outside of /templates/ folders)
 	*/
 	
-	function mimeType($ext) {
-
+    function mimeType($ext) {
+    	
         switch (strtolower($ext)) {
             case 'js' :
                 return 'application/x-javascript';
             case 'css' :
-                return 'text/css';
-            case 'svg' :
-                return 'image/svg+xml';
+                return array('text/css');     
             case 'html' :
             case 'htm' :
+               return 'text/html';            
             case 'txt' :
-                return 'text/plain'; // Note, as an example, this code will return 'text/plain' for the following extensions: svg, html, htm and txt
+            case 'svg' :
+                return 'text/plain'; // Note, as an example, this code will return 'text/plain' for the following extensions: svg and txt
             case 'json' :
                 return 'application/json';
             case 'csv' :
                 return 'text/csv';
             case 'ico' :
-                return 'image/x-icon';
+            	return 'image/x-icon';
             case 'jpg' :
             case 'jpeg' :
                 return array('image/jpg','image/jpeg');
@@ -42,7 +42,7 @@
             case 'gif' :
             case 'bmp' :
             case 'tiff' :
-                return 'image/' . strtolower($ext);
+                return 'image/' . strtolower($ext);            
             case 'xml' :
                 return 'application/xml';
             case 'doc' :
@@ -66,7 +66,7 @@
                 return 'application/rtf';
             case 'pdf' :
                 return 'application/pdf';
-
+            
             case 'mpeg' :
             case 'mpg' :
             case 'mpe' :
@@ -94,4 +94,3 @@
                 return FALSE;
         }
     }
-    
