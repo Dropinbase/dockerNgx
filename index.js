@@ -6,7 +6,7 @@ const yauzl = require('yauzl');
 
 // Define your CLI program
 program
-  .version('1.1.2')
+  .version('1.1.3')
   .description('Dropinbase CLI tool for starting a new Docker nginx project');
 
 // Define the 'start' command
