@@ -6,7 +6,7 @@ const yauzl = require('yauzl');
 
 // Define your CLI program
 program
-  .version('1.1.1')
+  .version('1.1.2')
   .description('Dropinbase CLI tool for starting a new Docker nginx project');
 
 // Define the 'start' command
@@ -18,12 +18,15 @@ program
     const srcPath = `${__dirname}/template.zip`;
 
     // Directory where the new project should be created
-    const destPath = `${process.cwd()}/${projectName}`;
+    // Replace spaces with underscores in projectName
+    const sanitizedProjectName = projectName.replace(/\s+/g, '_');
+    const destPath = `${process.cwd()}/${sanitizedProjectName}`;
 
     // Temporary zip path
     const zipPath = `${destPath}/template.zip`;
 
     await copyAndExtractZip(srcPath, destPath, zipPath);
+    await updateDockerCompose(destPath, projectName);
   });
 
 async function copyAndExtractZip(srcPath, destPath, zipPath) {
@@ -63,6 +66,23 @@ async function copyAndExtractZip(srcPath, destPath, zipPath) {
       });
     });
   });
+}
+async function updateDockerCompose(destPath, projectName) {
+  const dockerComposePath = `${destPath}/docker-compose.yml`;
+
+  try {
+    // Read docker-compose file
+    let content = await fs.readFile(dockerComposePath, 'utf8');
+
+    // Replace container name, removing spaces from projectName
+    content = content.replace(/container_name:\s*\w+/g, `container_name: ${projectName.replace(/\s+/g, '')}`);
+
+    // Write the updated content back to docker-compose.yml
+    await fs.writeFile(dockerComposePath, content, 'utf8');
+  } catch (err) {
+    console.error('Error updating docker-compose file:', err);
+    throw err;
+  }
 }
 
 program.parse(process.argv);
