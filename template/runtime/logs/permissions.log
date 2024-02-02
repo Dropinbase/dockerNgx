@@ -1,0 +1,48 @@
+----
+
+[2023-11-08 08:05:34] 172.24.0.1 system_public(x2x) DATABASE: dropinba_dibAdmin ON cypher.matogen.com
+URL:	https://dibangular.local/
+Authentication
+Expected POST parameter 'username' but did not get it. All params received: 
+----
+
+[2023-11-14 14:25:15] 172.24.0.1 system_public(x2x) DATABASE: dropinba_dibAdmin ON cypher.matogen.com
+URL:	https://dibangular.local/login
+Authentication
+Expected POST parameter 'username' but did not get it. All params received: 
+----
+
+[2023-11-14 14:25:18] 172.24.0.1 system_public(x2x) DATABASE: dropinba_dibAdmin ON cypher.matogen.com
+URL:	https://dibangular.local/dropins/dibAuthenticate/Site/login
+Authentication
+Expected POST parameter 'rememberMe' but did not get it. All params received: username=admin&password=test&form_token=8927dfaac0f22da14a254de293449841937c72a78db781b23e&email1=
+----
+
+[2023-11-16 14:44:01] 172.24.0.1 admin(x1x) DATABASE: dropinba_dibAdmin ON cypher.matogen.com
+URL:	https://dibangular.local/login?msg=CRITICAL%20ERROR.%20Path%20to%20DIB%20framework%20index%20file%20could%20not%20be%20resolved.
+Authentication
+Expected POST parameter 'username' but did not get it. All params received: 
+----
+
+[2023-11-16 14:44:23] 172.24.0.1 admin(x1x) DATABASE: dropinba_dibAdmin ON cypher.matogen.com
+URL:	https://dibangular.local/login?msg=CRITICAL%20ERROR.%20Path%20to%20DIB%20framework%20index%20file%20could%20not%20be%20resolved.
+Authentication
+Expected POST parameter 'username' but did not get it. All params received: 
+----
+
+[2023-11-16 14:48:55] 172.24.0.1 admin(x1x) DATABASE: dropinba_dibAdmin ON cypher.matogen.com
+URL:	https://dibangular.local/peff/Api/check.json?containerName=dibd
+Request blocked. The request requires container 'dibd' in active permissions records for this perm_group. Check that pef_dropin.pef_dropin_cache_db_id is set where needed, and regenerate permisssions.
+
+----
+
+[2023-12-01 14:00:38] 172.24.0.1 system_public(x2x) DATABASE: dropinba_dibAdmin ON cypher.matogen.com
+URL:	https://dibangular.local/login
+Authentication
+Expected POST parameter 'username' but did not get it. All params received: 
+----
+
+[2023-12-01 14:00:45] 172.24.0.1 system_public(x2x) DATABASE: dropinba_dibAdmin ON cypher.matogen.com
+URL:	https://dibangular.local/dropins/dibAuthenticate/Site/login
+Authentication
+Expected POST parameter 'rememberMe' but did not get it. All params received: username=admin&password=test&form_token=e1531cf0ed865ffd8cf8b78da48c74b70d9a1604bdc1f17438&email1=

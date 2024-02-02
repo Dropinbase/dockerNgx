@@ -3,11 +3,11 @@ services:
   server:
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./Dockerfile_dev
     environment: 
-      XDEBUG_CONFIG: mode=debug client_host=host.docker.internal client_port=9003 start_with_request=yes xdebug.log=/tmp/xdebug.log #remove for production releases
-    container_name: dropinbase
-    image: dropinbase:latest
+      XDEBUG_CONFIG: mode=debug client_host=host.docker.internal client_port=9003 start_with_request=yes xdebug.log=/tmp/xdebug.log 
+    container_name: dibclient
+    image: dibclient:ng15
     volumes:
       - ./:/dropinbase
     ports:

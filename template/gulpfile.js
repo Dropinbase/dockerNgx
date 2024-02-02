@@ -5,8 +5,8 @@ var sass = require('gulp-sass');
 
 sass.compiler = require('node-sass');
 
-const scssPath = './files/themes/overrides/setNgxMaterial/scss';
-const cssPath = './files/themes/overrides/setNgxMaterial/css';
+const scssPath = './files/themes/overrides/scss';
+const cssPath = './files/themes/overrides/css';
 gulp.task('sass', function () {
   return gulp.src(`${scssPath}/**/*.scss`)
     .pipe(sass({
