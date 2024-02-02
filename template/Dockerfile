@@ -1,4 +1,4 @@
-FROM dropinbase/angular:ng15
+FROM dropinbase/angular:latest
 RUN apt-get update --fix-missing
 
 # TODO /vendor/dropinbase/dropinbase should be copied from somewhere else
