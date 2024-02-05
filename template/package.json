@@ -10,10 +10,10 @@
     "gulp": "gulp",
     "build:scss": "gulp sass",
     "watch:scss": "gulp sass && gulp sass:watch",
-    "docker:rebuild": "docker pull dropinbase/angular:ng14 & docker-compose up --build",
+    "docker:rebuild": "docker pull dropinbase/angular:latest & docker-compose up --build",
     "docker:restart": "docker-compose up -d"
   },
-  "author": "Matogen Corporate Web Development PTY Ltd",
+  "author": "Dropinbase",
   "license": "GDP",
   "dependencies": {},
   "devDependencies": {
